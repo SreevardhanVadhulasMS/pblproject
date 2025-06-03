@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6ff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: white;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2a45d8;
+    }
+
+    .logo span {
+      color: black;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .register {
+      background-color: #2a45d8;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+    }
+
+    .hero-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .tagline {
+      font-weight: bold;
+      background-color: white;
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-top: 30px;
+      font-weight: 700;
+      color: #2a2a2a;
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.7;
+      font-weight: 500;
+      max-width: 700px;
+      color: #444;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 12px 24px;
+      border: 2px solid #2a45d8;
+      border-radius: 6px;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #2a45d8;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Learn<span>Hub</span></div>
+    <div class="nav-links">
+  <a href="{% url 'login' %}">Login</a>
+  <a href="{% url 'register' %}" class="register">Register</a>
+</div>
+
+    </div>
+  </nav>
+
+  <div class="hero-section">
+    <p class="tagline">Empowering Education Through Community</p>
+    <h1>Your Central Hub for Learning  & Educational News</h1>
+    <p class="description">
+      Learn Hub is an  platform where students and learners discover curated educational content, and stay updated with the latest news in the academic world through our API.
+    </p>
+    <a href="{% url 'register' %}" class="btn">Join the Community</a>
+  </div>
+</body>
+</html>
